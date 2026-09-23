@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sistema</title>
 </head>
 <body>
     <div id="postulantes">
@@ -37,7 +37,7 @@ $largo_vot = 4;
 $i =1;
 
 
-$vota = $votantes[$i][2]; 
+$id_pos = [];
 
 if(!($votantes[$i][1]))
 {
