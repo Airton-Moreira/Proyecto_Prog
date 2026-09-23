@@ -7,6 +7,7 @@ Gris texto: #E0E0E0
 *{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    padding: 0;
     background-color: #3D3D3D;
 }
 
@@ -25,6 +26,7 @@ Gris texto: #E0E0E0
     justify-content: center;
     align-items: center;
     margin: 20px;
+    margin-bottom: 10px;
 }
 
 .postulantes{
@@ -36,18 +38,51 @@ Gris texto: #E0E0E0
     padding: 10px;
     margin: 20px;
 }
+
 .PostDiv{
     display: flex;
     border-radius: 20px;
     margin: 20px;
+    justify-content: center;
+    justify-items: center;
     background-color: none;
 }
 
-button{
-    background-color: none;
-    border-radius: 10px;
-    border: none;
-    justify-items: cente;
+.Votos{
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
     margin: 20px;
 }
+
+.Cacique{
+    font-size: 1.3rem;
+    align-items: center;
+    display: flex;
+    margin: 20px;
+}
+
+
+button{
+    display: flex;
+    background-color: #898989;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    margin-top: 20px;
+    margin: 20px;
+    transition: all ease-in 0.3s;
+    font-weight: 600;
+}
+
+button:hover{
+    background-color: #bfbfbf;
+    transform: translateY(-3px);
+}
+
+
+
+
+/* ===== PARTICIPACION ===== */
 

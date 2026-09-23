@@ -71,12 +71,44 @@ $posibilidades = $posibilidades . "A";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema</title>
+    <title>Sistema de Votaciones</title>
+     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="postulantes">
+      <main>
+    <h1 class="Titulo">Votaciones Intertribus!</h1>
+    <p class="Desc">Solo un voto por persona</p>
+    </main>
 
-    </div>
+    <section class="postulantes">
+
+        <div class="PostDiv">
+            <h3 class="Cacique">Cacique 1</h3>
+            <p id="Votos" class="Votos">0</p>
+            <button id="Boton" class="BotonVotar">Votar</button>
+
+            <h3 class="Cacique">Cacique 2</h3>
+            <p id="Votos" class="Votos">0</p>
+             <button id="Boton" class="BotonVotar">Votar</button>
+        </div>
+
+         <div class="PostDiv">
+            <h3 class="Cacique">Cacique 1</h3>
+            <p id="Votos" class="Votos">0</p>
+            <button id="Boton" class="BotonVotar">Votar</button>
+
+            <h3 class="Cacique">Cacique 2</h3>
+            <p id="Votos" class="Votos">0</p>
+             <button id="Boton" class="BotonVotar">Votar</button>
+        </div>
+        
+    </section>
+
+
+
+    <footer>
+
+    </footer>
 </body>
 </html>
 <script>
