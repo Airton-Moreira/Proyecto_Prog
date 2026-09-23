@@ -1,5 +1,5 @@
 /*
-5to tono: #011C6B
+5to tono: #011C6B Color Fondo
 4to tono: #011142
 3er tono: #01258F
 2do Tono: #023BE6
@@ -13,7 +13,8 @@
   
 }
 body{
-      background-color: #0d0d0d;
+    /*Color Fondo*/
+      background-color: #011C6B;
 }
 h1{
     font-size: 2rem;
@@ -181,5 +182,33 @@ button:hover{
 /*==== SECCION DE REGISTRO VOTO*/
 
 .VTitulo{
-    
+    color: #E0E0E0;
+ display: flex;
+ align-items: center;
+ justify-items: center;
+}
+
+.VDesc{
+    margin: 20px;
+    color: #E0E0E0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.Volver{
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+    font-size: 1rem;
+    align-content: center;
+    border: none;
+    border-radius: 10px;
+    justify-content: center;
+    transition: all ease-in-out 0.3s;
+}
+
+.Volver:hover{
+    transform: scale(2px);
+    transform: translateY(-3px);
 }
