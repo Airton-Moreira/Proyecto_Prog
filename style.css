@@ -1,7 +1,9 @@
 /*
-Gris oscuro fondo: #3D3D3D
-
-Gris texto: #E0E0E0
+5to tono: #011C6B
+4to tono: #011142
+3er tono: #01258F
+2do Tono: #023BE6
+1er Tono: #0231BD
 */
 
 *{
@@ -11,7 +13,7 @@ Gris texto: #E0E0E0
   
 }
 body{
-      background-color: #3D3D3D;
+      background-color: #0d0d0d;
 }
 h1{
     font-size: 2rem;
@@ -59,16 +61,28 @@ h1{
 }
 
 .Cacique{
+    display: flex;
+    justify-items: center;
     font-size: 1.3rem;
     align-items: center;
     display: flex;
     margin: 20px;
 }
 
-
-button{
+.card{
+    border-radius: 20px;
+    background-color: #282828;
     display: flex;
-    background-color: #898989;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.BotonVotar{
+    display: flex;
+    color: #E0E0E0;
+    background-color: #383838;
     border-radius: 10px;
     border: none;
     padding: 10px;
@@ -76,10 +90,14 @@ button{
     margin: 20px;
     transition: all ease-in 0.3s;
     font-weight: 600;
+       justify-content: center;
+    justify-items: center;
+    text-align: center;
 }
 
 button:hover{
-    background-color: #bfbfbf;
+    color: #383838;
+    background-color:  #E0E0E0;
     transform: translateY(-3px);
 }
 
@@ -89,7 +107,11 @@ button:hover{
 /* ===== PARTICIPACION ===== */
 
 .estadisticas-principales{
-    display: flex;
+    display: grid;
+    max-width: 400px;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
     background-color: #bfbfbf;
     margin: 20px;
     padding: 10px;
@@ -134,7 +156,30 @@ button:hover{
     text-align: center;
 }
 
-.Cacique{
+.caciques{
     display: flex;
+    max-width: 400px;
+    background-color: #E0E0E0;
     justify-items: center;
+}
+
+.PostStats{
+    display: flex;
+    margin: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.postulante{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 20px;
+}
+
+
+/*==== SECCION DE REGISTRO VOTO*/
+
+.VTitulo{
+    
 }
