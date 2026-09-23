@@ -112,7 +112,8 @@ $posibilidades = $posibilidades . "A";
 </body>
 </html>
 <script>
-    let div_postulantes = document.getElementById("postulantes");
+    let div_post = document.getElementsByClassName("postulantes");
+    let div_postulantes = div_post[0];
     var posibilidades = '<?php echo $posibilidades;?>';
     let postulantes = [];
     let sub_post = "";
@@ -154,8 +155,17 @@ $posibilidades = $posibilidades . "A";
     {
         for(let i = 0; i < postulantes.length; i++)
         {
-            let postulante;
-            postulante.innerHTML(" <");
+            let postulante_h3 = document.createElement("h3");
+            postulante_h3.classList.add("Cacique");
+            postulante_h3.textContent = "asda";
+            let postulante_p = document.createElement("p");
+            postulante_p.classList.add("BotonVotar");
+            postulante_p.textContent = "as";
+            let postulante_button = document.createElement("button");
+            postulante_button.classList.add("BotonVotar");
+            postulante_button.textContent = "asda";
+            //div_post.append(postulante_h3);
+            //div_post.appendChild(postulante_h3);
         }
     }
     else
