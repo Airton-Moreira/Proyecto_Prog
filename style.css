@@ -8,10 +8,12 @@ Gris texto: #E0E0E0
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #3D3D3D;
+  
 }
-
-.Titulo{
+body{
+      background-color: #3D3D3D;
+}
+h1{
     font-size: 2rem;
     color: #E0E0E0;
     display: flex;
@@ -86,3 +88,53 @@ button:hover{
 
 /* ===== PARTICIPACION ===== */
 
+.estadisticas-principales{
+    display: flex;
+    background-color: #bfbfbf;
+    margin: 20px;
+    padding: 10px;
+}
+
+.habilitados{
+    background-color: #E0E0E0;
+    display: flex;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px;
+}
+
+.emitidos{
+    background-color: #E0E0E0;
+    display: flex;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px;
+}
+
+.pendientes{
+    background-color: #E0E0E0;
+    display: flex;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px;
+}
+
+.participacion{
+    background-color: #E0E0E0;
+    display: flex;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px;
+}
+
+.estadistica{
+    display: flex;
+    margin: 20px;
+    justify-items: center;
+    text-align: center;
+}
+
+.Cacique{
+    display: flex;
+    justify-items: center;
+}
