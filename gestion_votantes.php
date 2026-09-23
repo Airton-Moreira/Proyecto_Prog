@@ -10,11 +10,10 @@ $postulantes[0] = [1, "Martin", "naranja", "0", ""];
 $postulantes[1] = [2, "Jorge", "verde", "0", ""];
 $postulantes[2] = [3, "Brayan", "azul", "0", ""];
 $postulantes[3] = [4, "Jose", "violeta", "0", ""];
-
+echo "aaaaaaaaaaaaaaaaa";
 $largo_vot = 4;
-//$largo_vot = len($votantes);
 $i =1;
-$posibilidades = "";
+$posibilidades = "A";
 
 if(!($votantes[$i][1]))
 {
@@ -22,10 +21,49 @@ if(!($votantes[$i][1]))
     {
         if($votantes[$i][2] == $postulantes[$l][2])
         {
-            $posibilidades = $posibilidades . $postulantes[$l][0] . "-";
+            $aux_post = a_string($postulantes[$l][0]);
+            $posibilidades =  $posibilidades . $aux_post . "_" ;
         }
     }
 }
+
+function a_string($a)
+{
+    switch($a)
+    {
+        case 0:
+            return "0";
+
+        case 1:
+            return "1";
+
+        case 2:
+            return "2";
+
+        case 3:
+            return "3";
+
+        case 4:
+            return "4";
+
+        case 5:
+            return "5";
+
+        case 6:
+            return "6";
+
+        case 7:
+            return "7";
+
+        case 8:
+            return "8";
+
+        case 9:
+            return "9";
+
+    }
+}
+$posibilidades = $posibilidades . "A";
 ?>
 
 <!DOCTYPE html>
@@ -43,15 +81,23 @@ if(!($votantes[$i][1]))
 </html>
 <script>
     let div_postulantes = document.getElementById("postulantes");
-    let posibilidades = <?php print($posibilidades);?>;
+    var posibilidades = '<?php echo $posibilidades;?>';
     let postulantes = [];
     let sub_post = "";
-    
-        console.log(1);
-    for (let i = 0; i < posibilidades.length(); i++)
+    let aux_post = [];
+    aux_post[0] = [1, "Martin", "naranja", "0", ""];
+    aux_post[1] = [2, "Jorge", "verde", "0", ""];
+    aux_post[2] = [3, "Brayan", "azul", "0", ""];
+    aux_post[3] = [4, "Jose", "violeta", "0", ""];
+
+    for (let i = 0; i < posibilidades.length; i++)
     {
+        if(posibilidades[i] == "A")
+        {
+            continue;
+        }
         aux = false;
-        if(posibilidades[i] == "-")
+        if(posibilidades[i] == "_")
         {
             aux = true;
         }
@@ -61,19 +107,24 @@ if(!($votantes[$i][1]))
         }
         if(aux)
         {
+            console.log(sub_post);
             postulantes.push(sub_post);
             sub_post = "";
             continue;
         }
         else
         {
-            sub_post = sub_post + posibilidades[i];
+            sub_post = sub_post + "" + posibilidades[i];
             continue
         }
     }
     if(postulantes)
     {
-        console.log(postulantes);
+        for(let i = 0; i < postulantes.length; i++)
+        {
+            let postulante;
+            postulante.innerHTML(" <");
+        }
     }
     else
     {
