@@ -1,5 +1,21 @@
 <?php
-
+session_start();
+require "datos.php";
+$fila = ["id" => 1, "voto" => false, "tribu" =>"naranja", "dni" =>"45755741", "codigo_estudiante" =>"xqd4"];
+$votantes = buscar_votante_por_tribu($fila["tribu"]);
+$si_voto = 0;
+$no_voto = 0;
+foreach ($votantes as $v)
+{
+    if($v["voto"])
+    {
+        $si_voto++;
+    }
+    else
+    {
+        $no_voto++;
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,26 +37,26 @@
         <div class="habilitados">
         <h3>Total de votantes habilitados</h3>
 
-        <p class="estadistica">0</p>
+        <p class="estadistica"><?php echo $si_voto + $no_voto;?></p>
         </div>
    
 
     
     <div class="emitidos">
         <h3>Total de votantes emitidos</h3>
-        <p class="estadistica">0</p>
+        <p class="estadistica"><?php echo $si_voto;?></p>
     </div>
 
     
     <div class="pendientes">
         <h3>Total de votantes pendientess</h3>
-        <p class="estadistica">0</p>
+        <p class="estadistica"><?php echo $no_voto;?></p>
     </div>
 
 
       <div class="participacion">
         <h3>Participacion Total</h3>
-        <p class="estadistica">0</p>
+        <p class="estadistica"><?php echo $si_voto / ($si_voto + $no_voto);?></p>
     </div>
 
 </section>

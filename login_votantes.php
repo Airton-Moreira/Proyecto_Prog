@@ -27,7 +27,7 @@ $fila = 0;
             
                 if($dni == 0 && $id == 0)
                 {
-                    header("location: http://localhost/Proyect_Prog/Proyecto_Prog/Participacion.html", true);
+                    header("location: http://localhost/Proyect_Prog/Proyecto_Prog/Participacion.php", true);
                 }
                 else{
                     
