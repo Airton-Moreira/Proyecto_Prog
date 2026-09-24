@@ -1,12 +1,11 @@
 /*
+Paleta de colores utilizada sobre las tribus:
 Tono verde: #65FC58
 Tono Azul: #4961EA
 Tono blanco: #FFFCFA
 Tono Naranja: #FFA835
 Tono Violeta: #CB47FF
-
 */
-
 *{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -303,7 +302,7 @@ input[type="radio"] {
   font-family: sans-serif;
   padding: 10px;
   margin: 20px;
-  accent-color: #ff5722; 
+  accent-color: #333; 
    width: 18px;
   cursor: pointer;
   transform: scale(1.5); 
@@ -366,6 +365,28 @@ h3{
     align-items: center;
     border: none;
 }
+.votar{
+    min-width: 300px;
+    display: flex;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: center;
+    color: #E0E0E0;
+    background-color: #383838;
+    border: none;;
+    transition: all ease-in 0.3s;
+    font-weight: 600;
+}
+
+.votar:hover{
+    color: #383838;
+    background-color:  #E0E0E0;
+    transform: translateY(-3px);
+}
+
+
 
 .ingreso{
     min-width: 300px;
@@ -387,4 +408,36 @@ h3{
     color: #383838;
     background-color:  #E0E0E0;
     transform: translateY(-3px);
+}
+/*=====SECCION DE REGISTRO*/
+
+.VDesc{
+    font-weight: 600;
+    color: #E0E0E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    margin-bottom: 10px;
+}
+
+.Volver{
+    padding: 15px;
+    margin: 20px;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: center;
+    color: #E0E0E0;
+    background-color: #383838;
+    border: none;;
+    transition: all ease-in 0.3s;
+    font-weight: 600;
+}
+
+.Vboton{
+  display: flex;
+  align-content: center;
+  justify-items: center;
+  justify-content: center; 
+  align-items: center;     
 }
