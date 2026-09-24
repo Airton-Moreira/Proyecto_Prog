@@ -74,7 +74,7 @@ function postulantes_de_tribu($tribu)
 
 /*intento fallido para registrar los votos */ 
 
-/*
+
 function registrar_voto($votante_id, $candidato_id)
 {
    
@@ -118,7 +118,7 @@ function registrar_voto($votante_id, $candidato_id)
     fclose($lock);
 
     return $resultado;
-}*/
+}
 
 
 function candidato_valido($candidato_id, $tribu)
