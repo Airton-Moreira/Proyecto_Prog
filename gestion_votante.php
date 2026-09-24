@@ -107,184 +107,110 @@ function a_string($a)
     {
     case "naranja":
         echo '
-    <section class="PostulanteNaranja" id="div_salud">
+    <section class="PostulanteNaranja" id="div_salud">';
 
-        <div class="PostDiv">
+        $aux = 0;
 
-            <div class="card">
-            <h3 class="Cacique">Postulante 1</h3>
-            <span class="MTribu">T. Naranja</span>
-            <p id="Votos" class="Votos"></p>
-            </div>
-
-            <input class="Radio" type="radio" name = "voto" value "1" required>
-
-             <div class="card">
-            <h3 class="Cacique">Postulante 2</h3>
-            <span class="MTribu">T. Naranja</span>
-            <p id="Votos" class="Votos"></p>
-            </div>
+        foreach ($postulantes as $post)
+        {
+                echo 'PostDiv';
             
-            <input class="Radio" type="radio" name = "voto" value "2" required>
-        </div>
-
-         <div class="PostDiv">
-
-           <div class="card">
-            <h3 class="Cacique">Postulante 3</h3>
-                 <span class="MTribu">T. Naranja</span>
-            <p id="Votos" class="Votos"></p>
-            </div>
-
-            <input class="Radio" type="radio" name = "voto" value "3" required>
-
+            
+            echo '
             <div class="card">
-            <h3 class="Cacique">Postulante 4</h3>
-                 <span class="MTribu">T. Naranja</span>
+            <h3 class="Cacique">' . $post["nombre"] . '</h3>
+            <span class="MTribu">T. Naranja</span>
             <p id="Votos" class="Votos"></p>
             </div>
 
-             <input class="Radio" type="radio" name = "voto" value "4" required>
-        </div>
+            <input class="Radio" type="radio" name = "voto" value' . $post["id"] . 'required>';
+
+                echo '</div>';
+                
         
-    </section>';
+    echo '</section>';
+        }
     break;
 
     case "azul":
         echo '
-     <section class="PostulanteAzul" id="div_salud">
+    <section class="PostulanteAzul" id="div_salud">';
 
-        <div class="PostDiv">
+        $aux = 0;
 
-            <div class="card">
-            <h3 class="Cacique">Postulante 1</h3>
-            <span class="MTribu">T. Azul</span>
-            <p id="Votos" class="Votos"></p>
-            </div>
-
-            <input class="Radio" type="radio" name = "voto" value "1" required>
-
-             <div class="card">
-            <h3 class="Cacique">Postulante 2</h3>
-            <span class="MTribu">T. Azul</span>
-            <p id="Votos" class="Votos"></p>
-            </div>
+        foreach ($postulantes as $post)
+        {
+                echo 'PostDiv';
             
-            <input class="Radio" type="radio" name = "voto" value "2" required>
-        </div>
-
-         <div class="PostDiv">
-
-           <div class="card">
-            <h3 class="Cacique">Postulante 3</h3>
-                 <span class="MTribu">T. Azul</span>
-            <p id="Votos" class="Votos"></p>
-            </div>
-
-            <input class="Radio" type="radio" name = "voto" value "3" required>
-
+            
+            echo '
             <div class="card">
-            <h3 class="Cacique">Postulante 4</h3>
-                 <span class="MTribu">T. Azul</span>
+            <h3 class="Cacique">' . $post["nombre"] . '</h3>
+            <span class="MTribu">T.Azul</span>
             <p id="Votos" class="Votos"></p>
             </div>
 
-             <input class="Radio" type="radio" name = "voto" value "4" required>
-        </div>
+            <input class="Radio" type="radio" name = "voto" value' . $post["id"] . 'required>';
+
+                echo '</div>';
+                
         
-    </section>';
+    echo '</section>';
+        }
     break;
 
     case "verde":
+echo '
+    <section class="PostulanteVerde" id="div_salud">';
 
-        echo '
-     <section class="PostulanteVerde" id="div_salud">
+        $aux = 0;
 
-        <div class="PostDiv">
-
+        foreach ($postulantes as $post)
+        {
+                echo 'PostDiv';
+            
+            
+            echo '
             <div class="card">
-            <h3 class="Cacique">Postulante 1</h3>
-            <span class="MTribu">T. Verde</span>
-            <p id="Votos" class="Votos"></p name = "voto" value "1" required>
-            </div>
-
-            <input class="Radio" type="radio">
-
-             <div class="card">
-            <h3 class="Cacique">Postulante 2</h3>
+            <h3 class="Cacique">' . $post["nombre"] . '</h3>
             <span class="MTribu">T. Verde</span>
             <p id="Votos" class="Votos"></p>
             </div>
 
-            <input class="Radio" type="radio" name = "voto" value "2" required>
-        </div>
+            <input class="Radio" type="radio" name = "voto" value' . $post["id"] . 'required>';
 
-         <div class="PostDiv">
-
-           <div class="card">
-            <h3 class="Cacique">Postulante 3</h3>
-                 <span class="MTribu">T. Verde</span>
-            <p id="Votos" class="Votos"></p>
-            </div>
-
-            <input class="Radio" type="radio" name = "voto" value "3" required>
-
-            <div class="card">
-            <h3 class="Cacique">Postulante 4</h3>
-                 <span class="MTribu">T.  Verde</span>
-            <p id="Votos" class="Votos"></p>
-            </div>
-
-             <input class="Radio" type="radio" name = "voto" value "4" required>
-        </div>
+                echo '</div>';
+                
         
-    </section>';
+    echo '</section>';
+        }
     break;
 
         case "violeta":
             echo '
-     <section class="PostulanteVioleta" id="div_salud">
+    <section class="PostulanteVioleta" id="div_salud">';
 
-        <div class="PostDiv">
+        $aux = 0;
 
-            <div class="card">
-            <h3 class="Cacique">Postulante 1</h3>
-            <span class="MTribu">T. Violeta</span>
-            <p id="Votos" class="Votos"></p>
-            </div>
-
-            <input class="Radio" type="radio" name = "voto" value "1" required>
-
-             <div class="card">
-            <h3 class="Cacique">Postulante 2</h3>
-            <span class="MTribu">T. Violeta</span>
-            <p id="Votos" class="Votos"></p>
-            </div>
+        foreach ($postulantes as $post)
+        {
+                echo 'PostDiv';
             
-           <input class="Radio" type="radio" name = "voto" value "2" required>
-        </div>
-
-         <div class="PostDiv">
-
-           <div class="card">
-            <h3 class="Cacique">Postulante 3</h3>
-                 <span class="MTribu">T. Violeta</span>
-            <p id="Votos" class="Votos"></p>
-            </div>
-
-           <input class="Radio" type="radio" name = "voto" value "3" required>
-
+            
+            echo '
             <div class="card">
-            <h3 class="Cacique">Postulante 4</h3>
-                 <span class="MTribu">T. Violeta</span>
+            <h3 class="Cacique">' . $post["nombre"] . '</h3>
+            <span class="MTribu">T. Violeta</span>
             <p id="Votos" class="Votos"></p>
             </div>
 
-             <input class="Radio" type="radio" name = "voto" value "4" required>
-        </div>
+            <input class="Radio" type="radio" name = "voto" value' . $post["id"] . 'required>';
+
+                echo '</div>';
+                
         
-    </section>
-        ';
+    echo '</section>';
+        }
         break;
     }
     echo '<button class="votar">votar</button>
