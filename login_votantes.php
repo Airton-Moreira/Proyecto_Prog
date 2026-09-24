@@ -14,6 +14,7 @@ $fila = 0;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
@@ -24,10 +25,14 @@ $fila = 0;
                 $_SESSION == [$id];
                 $_SESSION == [$dni];
             
-                echo '<a href="gestion_votante.php">Votar</a>';
                 if($dni == 0 && $id == 0)
                 {
-                    echo '<a href="Participacion.html">Estadisticas</a>';
+                    header("location: http://localhost/Proyect_Prog/Proyecto_Prog/Participacion.html", true);
+                }
+                else{
+                    
+                header("location: http://localhost/Proyect_Prog/Proyecto_Prog/gestion_votante.php", true);
+
                 }
             }
             else
