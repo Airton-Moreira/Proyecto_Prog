@@ -12,7 +12,7 @@ registrar_voto($_SESSION["id"], $voto);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voto Realizado</title>
+    <title>Voto Realizado.</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
