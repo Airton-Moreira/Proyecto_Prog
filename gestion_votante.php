@@ -1,31 +1,21 @@
 <?php
-$votantes = [];
-$postulante = [];
-$votantes[0] = [1, false, "naranja", "45755741", "xqd4"];
-$votantes[1] = [2, false, "verde", "45754741", "hi7l"];
-$votantes[2] = [3, false, "azul", "45785741", "4567"];
-$votantes[3] = [4, false, "violeta", "45155741", "1234"];
+session_start();
 
-$postulantes[0] = [1, "Martin", "naranja", "0", ""];
-$postulantes[1] = [2, "Jorge", "verde", "0", ""];
-$postulantes[2] = [3, "Brayan", "azul", "0", ""];
-$postulantes[3] = [4, "Jose", "violeta", "0", ""];
+$votantes[0] = ["id" => 1, "voto" => false, "tribu" =>"naranja", "dni" =>"45755741", "codigo_estudiante" =>"xqd4"];
+$votantes[1] = ["id" => 2, "voto" => false, "tribu" =>"verde", "dni" =>"45754741", "codigo_estudiante" =>"hi7l"];
+$votantes[2] = ["id" => 3, "voto" => false, "tribu" =>"azul", "dni" =>"45785741", "codigo_estudiante" =>"4567"];
+$votantes[3] = ["id" => 4, "voto" => false, "tribu" =>"violeta", "dni" =>"45155741", "codigo_estudiante" =>"1234"];
+
+$postulantes[0] = ["id" => 1, "nombre" => "Martin", "tribu" => "naranja", "votos" => "0", "porcentaje" => ""];
+$postulantes[1] = ["id" => 2, "nombre" => "Jorge", "tribu" => "verde", "votos" => "0", "porcentaje" => ""];
+$postulantes[2] = ["id" => 3, "nombre" => "Brayan", "tribu" => "azul", "votos" => "0", "porcentaje" => ""];
+$postulantes[3] = ["id" => 4, "nombre" => "Jose", "tribu" => "violeta", "votos" => "0", "porcentaje" => ""];
 $largo_vot = 4;
 $i =1;
 $posibilidades = "A";
-$votante = [];
+$votante = ["voto" => true, "dni" => 45755441];
 
-if(!($votantes[$i][1]))
-{
-    for($l = 0; $l< $largo_vot; $l++)
-    {
-        if($votantes[$i][2] == $postulantes[$l][2])
-        {
-            $aux_post = a_string($postulantes[$l][0]);
-            $posibilidades =  $posibilidades . $aux_post . "_" ;
-        }
-    }
-}
+
 
 function a_string($a)
 {
@@ -63,7 +53,6 @@ function a_string($a)
 
     }
 }
-$posibilidades = $posibilidades . "A";
 ?>
 
 <!DOCTYPE html>
@@ -80,8 +69,17 @@ $posibilidades = $posibilidades . "A";
     <p class="Desc">Solo un voto por persona</p>
     </main>
     <?php
-    if($votante[voto])
+    if(!($votantes[$i]["voto"]))
     {
+        for($l = 0; $l< $largo_vot; $l++)
+        {
+            if($votantes[$i]["tribu"] == $postulantes[$l]["tribu"])
+            {
+                $aux_post = a_string($postulantes[$l]["id"]);
+                $posibilidades =  $posibilidades . $aux_post . "_" ;
+            }
+        }
+        $posibilidades =  $posibilidades . "A";
         echo '
     <section class="postulantes">
         <form action="registro_voto.php" method="POST">
