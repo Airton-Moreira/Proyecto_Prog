@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,7 +61,7 @@
                 <span class="porcentaje">0%</span>
 
                 <div class="barra">
-                    <div class="barra-progreso" "></div>
+                    <div class="barra-progreso" ></div>
                 </div>
             </div>
         </article>

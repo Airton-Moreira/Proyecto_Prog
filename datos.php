@@ -50,6 +50,17 @@ function buscar_votante($dni, $codigo)
     return null;
 }
 
+function buscar_votante_por_tribu($tribu)
+{
+    $votantes = [];
+    foreach (leer("votantes.json") as $v) {
+        if ($v["tribu"] === $tribu) {
+            array_push($votantes, $v);
+        } 
+    }
+    return $votantes;
+}
+
 function buscar_votante_por_id($id)
 {
     foreach (leer("votantes.json") as $v) {
