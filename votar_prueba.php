@@ -5,7 +5,7 @@ require "datos.php";
 if (!isset($_SESSION["votante_id"])) {
     header("Location: index.php");
     exit;
-}//hola
+}//hola 
 
 $votante = buscar_votante_por_id($_SESSION["votante_id"]);
 
