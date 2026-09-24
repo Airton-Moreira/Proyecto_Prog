@@ -409,6 +409,8 @@ h3{
     background-color:  #E0E0E0;
     transform: translateY(-3px);
 }
+
+
 /*=====SECCION DE REGISTRO*/
 
 .VDesc{
@@ -433,8 +435,15 @@ h3{
     transition: all ease-in 0.3s;
     font-weight: 600;
 }
-
+a{
+ display: flex;
+  align-content: center;
+  justify-items: center;
+  justify-content: center; 
+  align-items: center;
+}
 .Vboton{
+
   display: flex;
   align-content: center;
   justify-items: center;

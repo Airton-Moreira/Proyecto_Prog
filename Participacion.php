@@ -78,12 +78,12 @@ else
 
         <article class="postulante">
             <div class="postulante-info">
-                <span class="postulante-nombre">Postulante A</span>
-                <span class="postulante-tribu">Tribu 1</span>
+                <span class="postulante-nombre">Morena Quintana</span>
+                <span class="postulante-tribu">Tribu Naranja</span>
             </div>
 
             <div class="postulante-resultado">
-                <span class="porcentaje">0%</span>
+                <span class="porcentaje">64%</span>
 
                 <div class="barra">
                     <div class="barra-progreso" ></div>
@@ -93,12 +93,12 @@ else
 
         <article class="postulante">
             <div class="postulante-info">
-                <span class="postulante-nombre">Postulante B</span>
-                <span class="postulante-tribu">Tribu 2</span>
+                <span class="postulante-nombre">Melina Minuet</span>
+                <span class="postulante-tribu">Tribu Naranja</span>
             </div>
 
             <div class="postulante-resultado">
-                <span class="porcentaje">0%</span>
+                <span class="porcentaje">30%</span>
 
                 <div class="barra">
                     <div class="barra-progreso"></div>
@@ -108,12 +108,12 @@ else
 
         <article class="postulante">
             <div class="postulante-info">
-                <span class="postulante-nombre">Postulante C</span>
-                <span class="postulante-tribu">Tribu 3</span>
+                <span class="postulante-nombre">Mateo Scarabelli</span>
+                <span class="postulante-tribu">Tribyu Naranja</span>
             </div>
 
             <div class="postulante-resultado">
-                <span class="porcentaje">0%</span>
+                <span class="porcentaje">3%</span>
 
                 <div class="barra">
                     <div class="barra-progreso"></div>
@@ -123,18 +123,21 @@ else
 
         <article class="postulante">
             <div class="postulante-info">
-                <span class="postulante-nombre">Postulante D</span>
-                <span class="postulante-tribu">Tribu 4</span>
+                <span class="postulante-nombre">Joaquin Romero</span>
+                <span class="postulante-tribu">Tribu Naranja</span>
             </div>
 
             <div class="postulante-resultado">
-                <span class="porcentaje">0%</span>
+                <span class="porcentaje">3%</span>
 
                 <div class="barra">
                     <div class="barra-progreso"></div>
                 </div>
             </div>
         </article>
+
+
+        
 
     </div>
 </section>
