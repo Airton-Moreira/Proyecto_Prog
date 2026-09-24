@@ -2,6 +2,7 @@
 session_start();
 require "datos.php";
 $votante = buscar_votante_por_id($_SESSION["id"]);
+$postulantes = postulantes_de_tribu($votante["tribu"]);
 
 $votantes[0] = ["id" => 1, "voto" => false, "tribu" =>"naranja", "dni" =>"45755741", "codigo_estudiante" =>"xqd4"];
 $votantes[1] = ["id" => 2, "voto" => false, "tribu" =>"verde", "dni" =>"45754741", "codigo_estudiante" =>"hi7l"];
