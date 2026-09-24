@@ -5,7 +5,6 @@ Tono blanco: #FFFCFA
 Tono Naranja: #FFA835
 Tono Violeta: #CB47FF
 
-
 */
 
 *{
@@ -129,7 +128,7 @@ button:hover{
     margin-left: 10px;
 }
 .habilitados{
-    background-color: #E0E0E0;
+    background-color: #65FC58;
     display: flex;
     border-radius: 10px;
     padding: 30px;
@@ -137,7 +136,7 @@ button:hover{
 }
 
 .emitidos{
-    background-color: #E0E0E0;
+    background-color: #4961EA;
     display: flex;
     border-radius: 10px;
     padding: 30px;
@@ -145,7 +144,7 @@ button:hover{
 }
 
 .pendientes{
-    background-color: #E0E0E0;
+    background-color: #FFA835;
     display: flex;
     border-radius: 10px;
     padding: 30px;
@@ -153,7 +152,7 @@ button:hover{
 }
 
 .participacion{
-    background-color: #E0E0E0;
+    background-color: #CB47FF;
     display: flex;
     border-radius: 10px;
     padding: 30px;
