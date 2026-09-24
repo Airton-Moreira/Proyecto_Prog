@@ -2,10 +2,10 @@
 
 
 //Esto lo pongo para quer si la carpeta data no existe
-/*define("CARPETA", __DIR__ . "/data/");
+define("CARPETA", __DIR__ . "/data/");
 if (!is_dir(CARPETA)) {
     mkdir(CARPETA, 0777, true);
-}*/
+}
 
 // Lee un archivo JSON y lo devuelve como array
 // Si el archivo no existe, devuelve $por_defecto
@@ -49,7 +49,7 @@ function buscar_votante($dni, $codigo)
     }
     return null;
 }
-.
+
 function buscar_votante_por_id($id)
 {
     foreach (leer("votantes.json") as $v) {
@@ -123,10 +123,10 @@ function registrar_voto($votante_id, $candidato_id)
 
 function candidato_valido($candidato_id, $tribu)
 {
-   // if ($candidato_id == 0) {
+    if ($candidato_id == 0) {
         return true;
     }
-   // foreach (postulantes_de_tribu($tribu) as $p) {
+    foreach (postulantes_de_tribu($tribu) as $p) {
         if ($p["id"] == $candidato_id) {
             return true;
         }
