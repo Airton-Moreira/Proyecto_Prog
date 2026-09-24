@@ -72,6 +72,16 @@ function buscar_votante_por_id($id)
 }
 
 // Devuelve los postulantes habilitados de una tribu
+function buscar_postulante_por_id($id)
+{
+    foreach (leer("postulante.json") as $v) {
+        if ($v["id"] == $id) {
+            return $v;
+        }
+    }
+    return null;
+}
+
 function postulantes_de_tribu($tribu)
 {
     $lista = [];

@@ -1,8 +1,9 @@
 
 <?php
-
+session_start();
+require "datos.php";
 $voto = $_POST["voto"];
-
+registrar_voto($_SESSION["id"], $voto);
 
 ?>
 <!DOCTYPE html>

@@ -287,7 +287,7 @@ function a_string($a)
         ';
         break;
     }
-    echo '<button class="Volver">Registro</button>
+    echo '<button class="votar">votar</button>
     </form>';
     }
     else
