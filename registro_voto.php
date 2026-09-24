@@ -21,7 +21,7 @@ echo $voto;
     </main>
     
     <section class="VBoton">
-        <a href="login_votantes.php"><button class="Volver">Registro</button></a>
+        <a href="login_votantes.html"><button class="Volver">Registro</button></a>
     </section>
 </body>
 </html>
