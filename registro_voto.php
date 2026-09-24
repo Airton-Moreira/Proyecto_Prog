@@ -1,13 +1,10 @@
 
 <?php
-/*
+
 $voto = $_POST["voto"];
 
 echo $voto;
 
-if ($voto == "cacique1")
-    {
-    }*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,9 +21,8 @@ if ($voto == "cacique1")
     </main>
     
     <section class="VBoton">
-        <div>
-            <button class="Volver">Registro</button>
-        </div>
+        <a href="login_votantes.php"><button class="Volver">Registro</button></a>
     </section>
 </body>
 </html>
+

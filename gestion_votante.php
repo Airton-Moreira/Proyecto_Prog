@@ -80,27 +80,21 @@ $posibilidades = $posibilidades . "A";
     </main>
 
     <section class="postulantes">
-
-        <div class="PostDiv">
+        <form action="registro_voto.php" method="POST">
             <h3 class="Cacique">Cacique 1</h3>
-            <p id="Votos" class="Votos">0</p>
-            <button id="Boton" class="BotonVotar">Votar</button>
+            <input type="radio" name="voto" required value="1"></input>
 
             <h3 class="Cacique">Cacique 2</h3>
-            <p id="Votos" class="Votos">0</p>
-             <button id="Boton" class="BotonVotar">Votar</button>
-        </div>
+            <input type="radio" name="voto" required value="2"></input>
 
-         <div class="PostDiv">
             <h3 class="Cacique">Cacique 1</h3>
-            <p id="Votos" class="Votos">0</p>
-            <button id="Boton" class="BotonVotar">Votar</button>
+            <input type="radio" name="voto" required value="3"></input>
 
             <h3 class="Cacique">Cacique 2</h3>
-            <p id="Votos" class="Votos">0</p>
-             <button id="Boton" class="BotonVotar">Votar</button>
-        </div>
-        
+            <input type="radio" name="voto" required value="4"></input>
+            
+            <button id="Boton" class="BotonVotar">Votar</button>
+        </form>
     </section>
 
 
