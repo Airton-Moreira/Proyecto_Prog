@@ -1,8 +1,8 @@
 
 <?php
-
+session_start();
 $voto = $_POST["voto"];
-
+registrar_voto($_SESSION["id"], $voto);
 
 ?>
 <!DOCTYPE html>
