@@ -47,7 +47,14 @@ h1{
     margin: 20px;
     margin-bottom: 10px;
 }
-
+.PostulanteNaranja {
+    margin: 20px;
+    color: white;
+    background: #FFA835;
+    border: 1px solid #303136;
+    border-radius: 15px;
+    padding: 25px;
+}
 .PostDiv{
     display: flex;
     border-radius: 20px;
@@ -205,6 +212,7 @@ button:hover{
     border-radius: 15px;
     padding: 25px;
 }
+
 .barra{
     width: 0%;
 }
@@ -233,6 +241,7 @@ button:hover{
     color: #999999;
     font-size: 0.9rem;
 }
+
 
 
 
