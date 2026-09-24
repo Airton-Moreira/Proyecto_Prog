@@ -1,9 +1,11 @@
 /*
-5to tono: #011C6B Color Fondo
-4to tono: #011142
-3er tono: #01258F
-2do Tono: #023BE6
-1er Tono: #0231BD 
+Tono verde: #65FC58
+Tono Azul: #4961EA
+Tono blanco: #FFFCFA
+Tono Naranja: #FFA835
+Tono Violeta: #CB47FF
+
+
 */
 
 *{
@@ -13,8 +15,7 @@
   
 }
 body{
-    /*Color Fondo*/
-      background-color: #011C6B;
+ margin: 0;
 }
 
 
@@ -119,17 +120,19 @@ button:hover{
 
 
 
-/* ===== PARTICIPACION ===== */
+/* ===== PARTICIPACION 
+/*==== SECCION DE REGISTRO VOTO O DE  ESTADISTICAS*/
 
 .estadisticas-principales{
     display: grid;
     max-width: 400px;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
     background-color: #bfbfbf;
     margin: 20px;
     padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 45px;
 }
 
 .habilitados{
@@ -162,51 +165,13 @@ button:hover{
     border-radius: 10px;
     padding: 30px;
     margin: 20px;
-}
-
-.estadistica{
-    display: flex;
-    margin: 20px;
-    justify-items: center;
-    text-align: center;
-}
-
-.caciques{
-    display: flex;
-    max-width: 400px;
-    background-color: #E0E0E0;
-    justify-items: center;
-}
-
-.PostStats{
-    display: flex;
-    margin: 20px;
-    padding: 20px;
-    justify-items: center;
-}
-
-.postulante{
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    margin: 20px;
-}
-
-
-/*==== SECCION DE REGISTRO VOTO O DE  ESTADISTICAS*/
-
-.participaciones {
     width: min(1200px, 90%);
     margin: 0 auto;
-    padding: 50px 0;
+
+
 }
 
-.estadisticas-principales {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin-bottom: 45px;
-}
+
 
 .estadistica-card {
     background: #1b1c1f;
@@ -243,12 +208,9 @@ button:hover{
     border-radius: 10px;
     padding: 25px;
 }
-
-.postulantes > h2 {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+.barra{
+    width: 0%;
 }
-
 .postulantes-lista {
     display: flex;
     flex-direction: column;
@@ -274,3 +236,6 @@ button:hover{
     color: #999999;
     font-size: 0.9rem;
 }
+
+
+
