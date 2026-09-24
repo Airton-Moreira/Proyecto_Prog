@@ -18,6 +18,5 @@ votos += 1;
 
 resultado.textContent = votos;
 
-            });
-
-        });
+      });
+ });
