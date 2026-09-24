@@ -13,6 +13,7 @@ $postulantes[3] = [4, "Jose", "violeta", "0", ""];
 $largo_vot = 4;
 $i =1;
 $posibilidades = "A";
+$votante = [];
 
 if(!($votantes[$i][1]))
 {
@@ -74,11 +75,14 @@ $posibilidades = $posibilidades . "A";
      <link rel="stylesheet" href="style.css">
 </head>
 <body>
-      <main>
+    <main>
     <h1 class="Titulo">Votaciones Intertribus!</h1>
     <p class="Desc">Solo un voto por persona</p>
     </main>
-
+    <?php
+    if($votante[voto])
+    {
+        echo '
     <section class="postulantes">
         <form action="registro_voto.php" method="POST">
             <h3 class="Cacique">Cacique 1</h3>
@@ -96,6 +100,77 @@ $posibilidades = $posibilidades . "A";
             <button id="Boton" class="BotonVotar">Votar</button>
         </form>
     </section>
+    <script>
+
+ 
+        let div_post = document.getElementsByClassName("postulantes");
+        let div_postulantes = div_post[0];
+        var posibilidades = ' . $posibilidades . ';
+        let postulantes = [];
+        let sub_post = "";
+        let aux_post = [];
+        aux_post[0] = [1, "Martin", "naranja", "0", ""];
+        aux_post[1] = [2, "Jorge", "verde", "0", ""];
+        aux_post[2] = [3, "Brayan", "azul", "0", ""];
+        aux_post[3] = [4, "Jose", "violeta", "0", ""];
+
+        for (let i = 0; i < posibilidades.length; i++)
+        {
+            if(posibilidades[i] == "A")
+            {
+                continue;
+            }
+            aux = false;
+            if(posibilidades[i] == "_")
+            {
+                aux = true;
+            }
+            else
+            {
+                aux = false;
+            }
+            if(aux)
+            {
+                console.log(sub_post);
+                postulantes.push(sub_post);
+                sub_post = "";
+                continue;
+            }
+            else
+            {
+                sub_post = sub_post + "" + posibilidades[i];
+                continue
+            }
+        }
+        if(postulantes)
+        {
+            for(let i = 0; i < postulantes.length; i++)
+            {
+                let postulante_h3 = document.createElement("h3");
+                postulante_h3.classList.add("Cacique");
+                postulante_h3.textContent = "asda";
+                let postulante_p = document.createElement("p");
+                postulante_p.classList.add("BotonVotar");
+                postulante_p.textContent = "as";
+                let postulante_button = document.createElement("button");
+                postulante_button.classList.add("BotonVotar");
+                postulante_button.textContent = "asda";
+                div_post.appendChild(postulante_h3);
+            }
+        }
+        else
+        {
+            console.log(1);
+        }
+
+    </script>';
+    }
+    else
+    {
+        
+    }
+    ?>
+
 
 
 
@@ -104,66 +179,3 @@ $posibilidades = $posibilidades . "A";
     </footer>
 </body>
 </html>
-<script>
-    let div_post = document.getElementsByClassName("postulantes");
-    let div_postulantes = div_post[0];
-    var posibilidades = '<?php echo $posibilidades;?>';
-    let postulantes = [];
-    let sub_post = "";
-    let aux_post = [];
-    aux_post[0] = [1, "Martin", "naranja", "0", ""];
-    aux_post[1] = [2, "Jorge", "verde", "0", ""];
-    aux_post[2] = [3, "Brayan", "azul", "0", ""];
-    aux_post[3] = [4, "Jose", "violeta", "0", ""];
-
-    for (let i = 0; i < posibilidades.length; i++)
-    {
-        if(posibilidades[i] == "A")
-        {
-            continue;
-        }
-        aux = false;
-        if(posibilidades[i] == "_")
-        {
-            aux = true;
-        }
-        else
-        {
-            aux = false;
-        }
-        if(aux)
-        {
-            console.log(sub_post);
-            postulantes.push(sub_post);
-            sub_post = "";
-            continue;
-        }
-        else
-        {
-            sub_post = sub_post + "" + posibilidades[i];
-            continue
-        }
-    }
-    if(postulantes)
-    {
-        for(let i = 0; i < postulantes.length; i++)
-        {
-            let postulante_h3 = document.createElement("h3");
-            postulante_h3.classList.add("Cacique");
-            postulante_h3.textContent = "asda";
-            let postulante_p = document.createElement("p");
-            postulante_p.classList.add("BotonVotar");
-            postulante_p.textContent = "as";
-            let postulante_button = document.createElement("button");
-            postulante_button.classList.add("BotonVotar");
-            postulante_button.textContent = "asda";
-            div_post.appendChild(postulante_h3);
-        }
-    }
-    else
-    {
-        console.log(1);
-    }
-
-</script>
-
