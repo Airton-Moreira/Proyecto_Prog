@@ -55,6 +55,31 @@ h1{
     border-radius: 15px;
     padding: 25px;
 }
+.PostulanteVerde {
+    margin: 20px;
+    color: white;
+    background: #65FC58;
+    border: 1px solid #303136;
+    border-radius: 15px;
+    padding: 25px;
+}
+.PostulanteVioleta {
+    margin: 20px;
+    color: white;
+    background: #CB47FF;
+    border: 1px solid #303136;
+    border-radius: 15px;
+    padding: 25px;
+}
+.PostulanteAzul {
+    margin: 20px;
+    color: white;
+    background: #4961EA;
+    border: 1px solid #303136;
+    border-radius: 15px;
+    padding: 25px;
+}
+
 .PostDiv{
     display: flex;
     border-radius: 20px;
@@ -242,6 +267,31 @@ button:hover{
     font-size: 0.9rem;
 }
 
+
+.Nota{
+    border-radius: 15px;
+    padding: 10px;
+    border: 1px solid #303136;
+    margin: 20px;   
+}
+
+.NotaD{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.Descripcion{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    font-weight: 600;
+    color: white;
+    padding: 10px;
+    margin: 20px;
+}
 
 
 

@@ -9,7 +9,7 @@ botones.forEach(function(boton) {
 
 boton.addEventListener("click", function() {
 
-const tarjeta = boton.parentElement;
+const tarjeta = boton.parentElement;      
 const resultado = tarjeta.querySelector(".Votos");
 
 let votos = Number(resultado.textContent);
