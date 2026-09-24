@@ -3,7 +3,6 @@
 
 $voto = $_POST["voto"];
 
-echo $voto;
 
 ?>
 <!DOCTYPE html>
