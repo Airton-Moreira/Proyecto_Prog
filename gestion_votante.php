@@ -10,7 +10,6 @@ $postulantes[0] = [1, "Martin", "naranja", "0", ""];
 $postulantes[1] = [2, "Jorge", "verde", "0", ""];
 $postulantes[2] = [3, "Brayan", "azul", "0", ""];
 $postulantes[3] = [4, "Jose", "violeta", "0", ""];
-echo "aaaaaaaaaaaaaaaaa";
 $largo_vot = 4;
 $i =1;
 $posibilidades = "A";
@@ -164,8 +163,7 @@ $posibilidades = $posibilidades . "A";
             let postulante_button = document.createElement("button");
             postulante_button.classList.add("BotonVotar");
             postulante_button.textContent = "asda";
-            //div_post.append(postulante_h3);
-            //div_post.appendChild(postulante_h3);
+            div_post.appendChild(postulante_h3);
         }
     }
     else
