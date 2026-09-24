@@ -1,5 +1,7 @@
 <?php
 session_start();
+require "datos.php";
+$votante = buscar_votante_por_id($_SESSION["id"]);
 
 $votantes[0] = ["id" => 1, "voto" => false, "tribu" =>"naranja", "dni" =>"45755741", "codigo_estudiante" =>"xqd4"];
 $votantes[1] = ["id" => 2, "voto" => false, "tribu" =>"verde", "dni" =>"45754741", "codigo_estudiante" =>"hi7l"];
@@ -13,7 +15,7 @@ $postulantes[3] = ["id" => 4, "nombre" => "Jose", "tribu" => "violeta", "votos" 
 $largo_vot = 4;
 $i =1;
 $posibilidades = "A";
-$votante = ["voto" => true, "dni" => 45755441];
+$votante = ["id" => 3, "voto" => false, "tribu" =>"azul", "dni" =>"45785741", "codigo_estudiante" =>"4567"];
 
 
 
@@ -64,7 +66,32 @@ function a_string($a)
      <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <main class="encabezado">
+   
+
+    <!--Desconecte el script para que no se pueda ver la cantidad de votos--->
+<script src=""></script>
+
+    <footer>
+
+    </footer>
+
+
+    <?php
+    if(!($votante["voto"]))
+    {
+        for($l = 0; $l< $largo_vot; $l++)
+        {
+            if($votante["tribu"] == $postulantes[$l]["tribu"])
+            {
+                $aux_post = a_string($postulantes[$l]["id"]);
+                $posibilidades =  $posibilidades . $aux_post . "_" ;
+            }
+        }
+        $posibilidades =  $posibilidades . "A";
+        echo '
+        <form action="registro_voto.php" method="POST">
+        
+        <main class="encabezado">
     <h1 class="Titulo">Votaciones Intertribus</h1>
     <p class="Desc">Solo un voto por persona</p>
     </main>
@@ -74,8 +101,11 @@ function a_string($a)
             <h1 class="Atencion">Atencion</h1>
             <p class="Descripcion"> Solamente se puede votar a un solo partido. Pensa con cuidado y no votes solamente por votar. Una vez realizado el voto, no se puede cambiar</p>
          </div>
-    </section>
-
+    </section>';
+    switch($votante["tribu"])
+    {
+    case "naranja":
+        echo '
     <section class="PostulanteNaranja">
 
         <div class="PostDiv">
@@ -116,8 +146,11 @@ function a_string($a)
              <input class="Radio" type="radio">
         </div>
         
-    </section>
+    </section>';
+    break;
 
+    case "azul":
+        echo '
      <section class="PostulanteAzul">
 
         <div class="PostDiv">
@@ -158,9 +191,12 @@ function a_string($a)
              <input class="Radio" type="radio">
         </div>
         
-    </section>
+    </section>';
+    break;
 
+    case "verde":
 
+        echo '
      <section class="PostulanteVerde">
 
         <div class="PostDiv">
@@ -201,9 +237,11 @@ function a_string($a)
              <input class="Radio" type="radio">
         </div>
         
-    </section>
+    </section>';
+    break;
 
-
+        case "violeta":
+            echo '
      <section class="PostulanteVioleta">
 
         <div class="PostDiv">
@@ -241,49 +279,20 @@ function a_string($a)
             <p id="Votos" class="Votos"></p>
             </div>
 
-             <input class="Radio" type="radio">
+             <input class="Radio" type="radio" >
         </div>
         
     </section>
-
-    <!--Desconecte el script para que no se pueda ver la cantidad de votos--->
-<script src=""></script>
-
-    <footer>
-
-    </footer>
-
-
-    <?php
-    if(!($votantes[$i]["voto"]))
+        ';
+        break;
+    }
+    echo '<button class="Volver">Registro</button>
+    </form>';
+    }
+    else
     {
-        for($l = 0; $l< $largo_vot; $l++)
-        {
-            if($votantes[$i]["tribu"] == $postulantes[$l]["tribu"])
-            {
-                $aux_post = a_string($postulantes[$l]["id"]);
-                $posibilidades =  $posibilidades . $aux_post . "_" ;
-            }
-        }
-        $posibilidades =  $posibilidades . "A";
-        echo '
-    <section class="postulantes">
-        <form action="registro_voto.php" method="POST">
-            <h3 class="Cacique">Cacique 1</h3>
-            <input type="radio" name="voto" required value="1"></input>
-
-            <h3 class="Cacique">Cacique 2</h3>
-            <input type="radio" name="voto" required value="2"></input>
-
-            <h3 class="Cacique">Cacique 1</h3>
-            <input type="radio" name="voto" required value="3"></input>
-
-            <h3 class="Cacique">Cacique 2</h3>
-            <input type="radio" name="voto" required value="4"></input>
-            
-            <button id="Boton" class="BotonVotar">Votar</button>
-        </form>
-    </section>
+        
+    }?><!--
     <script>
 
  
@@ -347,13 +356,7 @@ function a_string($a)
             console.log(1);
         }
 
-    </script>';
-    }
-    else
-    {
-        
-    }
-    ?>
+    </script>-->
 
 
 
