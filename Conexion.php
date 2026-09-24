@@ -67,9 +67,6 @@ function buscar_votante_por_id($id)
     return convertir_votante($filas[0] ?? null);
 }
 
-// ------------------------------------------------------------
-// Postulantes habilitados de una tribu
-// ------------------------------------------------------------
 function postulantes_de_tribu($tribu)
 {
     $filas = supabase(
@@ -89,12 +86,6 @@ function postulantes_de_tribu($tribu)
     return $lista;
 }
 
-// ------------------------------------------------------------
-// REGISTRAR VOTO: todo el trabajo (verificaciones, bloqueo de
-// doble voto y guardado) lo hace la función registrar_voto de la
-// base, en una sola transacción. Devuelve "ok" o el motivo del error.
-// $candidato_id = 0 significa voto en blanco.
-// ------------------------------------------------------------
 function registrar_voto($votante_id, $candidato_id)
 {
     $resultado = supabase("POST", "rpc/registrar_voto", [
@@ -108,17 +99,14 @@ function registrar_voto($votante_id, $candidato_id)
     return $resultado;
 }
 
-// ------------------------------------------------------------
-// Para el panel de la Comisión (los vas a usar después)
-// ------------------------------------------------------------
 function obtener_participacion()
 {
     $filas = supabase("POST", "rpc/participacion", new stdClass());
-    return $filas[0] ?? null;      // habilitados, votaron, pendientes, porcentaje
+    return $filas[0] ?? null;      
 }
 
 function obtener_resultados()
 {
-    return supabase("POST", "rpc/resultados", new stdClass()) ?? [];   // vacío si no está cerrada
+    return supabase("POST", "rpc/resultados", new stdClass()) ?? [];   
 }
 ?>
