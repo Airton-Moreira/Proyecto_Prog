@@ -295,3 +295,20 @@ button:hover{
 
 
 
+/*===CAMBIO RAPIDO PARA RADIO*/
+input[type="radio"] {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: sans-serif;
+  padding: 10px;
+  margin: 20px;
+  accent-color: #ff5722; 
+   width: 18px;
+  cursor: pointer;
+  transform: scale(1.5); 
+
+
+}
+
+

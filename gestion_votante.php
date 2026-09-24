@@ -64,10 +64,196 @@ function a_string($a)
      <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-    <h1 class="Titulo">Votaciones Intertribus!</h1>
+   <main class="encabezado">
+    <h1 class="Titulo">Votaciones Intertribus</h1>
     <p class="Desc">Solo un voto por persona</p>
     </main>
+
+      <section class="Nota">
+         <div class="NotaD">
+            <h1 class="Atencion">Atencion</h1>
+            <p class="Descripcion"> Solamente se puede votar a un solo partido. Pensa con cuidado y no votes solamente por votar. Una vez realizado el voto, no se puede cambiar</p>
+         </div>
+    </section>
+
+    <section class="PostulanteNaranja">
+
+        <div class="PostDiv">
+
+            <div class="card">
+            <h3 class="Cacique">Postulante 1</h3>
+            <span class="MTribu">T. Naranja</span>
+            <p id="Votos" class="Votos"></p>
+            </div>
+
+            <input class="Radio" type="radio">
+
+             <div class="card">
+            <h3 class="Cacique">Postulante 2</h3>
+            <span class="MTribu">T. Naranja</span>
+            <p id="Votos" class="Votos"></p>
+            </div>
+            
+            <input class="Radio" type="radio">
+        </div>
+
+         <div class="PostDiv">
+
+           <div class="card">
+            <h3 class="Cacique">Postulante 3</h3>
+                 <span class="MTribu">T. Naranja</span>
+            <p id="Votos" class="Votos"></p>
+            </div>
+
+            <input class="Radio" type="radio">
+
+            <div class="card">
+            <h3 class="Cacique">Postulante 4</h3>
+                 <span class="MTribu">T. Naranja</span>
+            <p id="Votos" class="Votos"></p>
+            </div>
+
+             <input class="Radio" type="radio">
+        </div>
+        
+    </section>
+
+     <section class="PostulanteAzul">
+
+        <div class="PostDiv">
+
+            <div class="card">
+            <h3 class="Cacique">Postulante 1</h3>
+            <span class="MTribu">T. Azul</span>
+            <p id="Votos" class="Votos"></p>
+            </div>
+
+            <input class="Radio" type="radio">
+
+             <div class="card">
+            <h3 class="Cacique">Postulante 2</h3>
+            <span class="MTribu">T. Azul</span>
+            <p id="Votos" class="Votos"></p>
+            </div>
+            
+            <input class="Radio" type="radio">
+        </div>
+
+         <div class="PostDiv">
+
+           <div class="card">
+            <h3 class="Cacique">Postulante 3</h3>
+                 <span class="MTribu">T. Azul</span>
+            <p id="Votos" class="Votos"></p>
+            </div>
+
+            <input class="Radio" type="radio">
+
+            <div class="card">
+            <h3 class="Cacique">Postulante 4</h3>
+                 <span class="MTribu">T. Azul</span>
+            <p id="Votos" class="Votos"></p>
+            </div>
+
+             <input class="Radio" type="radio">
+        </div>
+        
+    </section>
+
+
+     <section class="PostulanteVerde">
+
+        <div class="PostDiv">
+
+            <div class="card">
+            <h3 class="Cacique">Postulante 1</h3>
+            <span class="MTribu">T. Verde</span>
+            <p id="Votos" class="Votos"></p>
+            </div>
+
+            <input class="Radio" type="radio">
+
+             <div class="card">
+            <h3 class="Cacique">Postulante 2</h3>
+            <span class="MTribu">T. Verde</span>
+            <p id="Votos" class="Votos"></p>
+            </div>
+
+            <input class="Radio" type="radio">
+        </div>
+
+         <div class="PostDiv">
+
+           <div class="card">
+            <h3 class="Cacique">Postulante 3</h3>
+                 <span class="MTribu">T. Verde</span>
+            <p id="Votos" class="Votos"></p>
+            </div>
+
+            <input class="Radio" type="radio">
+
+            <div class="card">
+            <h3 class="Cacique">Postulante 4</h3>
+                 <span class="MTribu">T.  Verde</span>
+            <p id="Votos" class="Votos"></p>
+            </div>
+
+             <input class="Radio" type="radio">
+        </div>
+        
+    </section>
+
+
+     <section class="PostulanteVioleta">
+
+        <div class="PostDiv">
+
+            <div class="card">
+            <h3 class="Cacique">Postulante 1</h3>
+            <span class="MTribu">T. Violeta</span>
+            <p id="Votos" class="Votos"></p>
+            </div>
+
+            <input class="Radio" type="radio">
+
+             <div class="card">
+            <h3 class="Cacique">Postulante 2</h3>
+            <span class="MTribu">T. Violeta</span>
+            <p id="Votos" class="Votos"></p>
+            </div>
+            
+           <input class="Radio" type="radio">
+        </div>
+
+         <div class="PostDiv">
+
+           <div class="card">
+            <h3 class="Cacique">Postulante 3</h3>
+                 <span class="MTribu">T. Violeta</span>
+            <p id="Votos" class="Votos"></p>
+            </div>
+
+           <input class="Radio" type="radio">
+
+            <div class="card">
+            <h3 class="Cacique">Postulante 4</h3>
+                 <span class="MTribu">T. Violeta</span>
+            <p id="Votos" class="Votos"></p>
+            </div>
+
+             <input class="Radio" type="radio">
+        </div>
+        
+    </section>
+
+    <!--Desconecte el script para que no se pueda ver la cantidad de votos--->
+<script src=""></script>
+
+    <footer>
+
+    </footer>
+
+
     <?php
     if(!($votantes[$i]["voto"]))
     {
