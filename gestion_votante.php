@@ -2,6 +2,7 @@
 session_start();
 require "datos.php";
 $votante = buscar_votante_por_id($_SESSION["id"]);
+$postulantes = postulantes_de_tribu($votante["tribu"]);
 
 $votantes[0] = ["id" => 1, "voto" => false, "tribu" =>"naranja", "dni" =>"45755741", "codigo_estudiante" =>"xqd4"];
 $votantes[1] = ["id" => 2, "voto" => false, "tribu" =>"verde", "dni" =>"45754741", "codigo_estudiante" =>"hi7l"];
@@ -106,7 +107,7 @@ function a_string($a)
     {
     case "naranja":
         echo '
-    <section class="PostulanteNaranja">
+    <section class="PostulanteNaranja" id="div_salud">
 
         <div class="PostDiv">
 
@@ -116,7 +117,7 @@ function a_string($a)
             <p id="Votos" class="Votos"></p>
             </div>
 
-            <input class="Radio" type="radio">
+            <input class="Radio" type="radio" name = "voto" value "1" required>
 
              <div class="card">
             <h3 class="Cacique">Postulante 2</h3>
@@ -124,7 +125,7 @@ function a_string($a)
             <p id="Votos" class="Votos"></p>
             </div>
             
-            <input class="Radio" type="radio">
+            <input class="Radio" type="radio" name = "voto" value "2" required>
         </div>
 
          <div class="PostDiv">
@@ -135,7 +136,7 @@ function a_string($a)
             <p id="Votos" class="Votos"></p>
             </div>
 
-            <input class="Radio" type="radio">
+            <input class="Radio" type="radio" name = "voto" value "3" required>
 
             <div class="card">
             <h3 class="Cacique">Postulante 4</h3>
@@ -143,7 +144,7 @@ function a_string($a)
             <p id="Votos" class="Votos"></p>
             </div>
 
-             <input class="Radio" type="radio">
+             <input class="Radio" type="radio" name = "voto" value "4" required>
         </div>
         
     </section>';
@@ -151,7 +152,7 @@ function a_string($a)
 
     case "azul":
         echo '
-     <section class="PostulanteAzul">
+     <section class="PostulanteAzul" id="div_salud">
 
         <div class="PostDiv">
 
@@ -161,7 +162,7 @@ function a_string($a)
             <p id="Votos" class="Votos"></p>
             </div>
 
-            <input class="Radio" type="radio">
+            <input class="Radio" type="radio" name = "voto" value "1" required>
 
              <div class="card">
             <h3 class="Cacique">Postulante 2</h3>
@@ -169,7 +170,7 @@ function a_string($a)
             <p id="Votos" class="Votos"></p>
             </div>
             
-            <input class="Radio" type="radio">
+            <input class="Radio" type="radio" name = "voto" value "2" required>
         </div>
 
          <div class="PostDiv">
@@ -180,7 +181,7 @@ function a_string($a)
             <p id="Votos" class="Votos"></p>
             </div>
 
-            <input class="Radio" type="radio">
+            <input class="Radio" type="radio" name = "voto" value "3" required>
 
             <div class="card">
             <h3 class="Cacique">Postulante 4</h3>
@@ -188,7 +189,7 @@ function a_string($a)
             <p id="Votos" class="Votos"></p>
             </div>
 
-             <input class="Radio" type="radio">
+             <input class="Radio" type="radio" name = "voto" value "4" required>
         </div>
         
     </section>';
@@ -197,14 +198,14 @@ function a_string($a)
     case "verde":
 
         echo '
-     <section class="PostulanteVerde">
+     <section class="PostulanteVerde" id="div_salud">
 
         <div class="PostDiv">
 
             <div class="card">
             <h3 class="Cacique">Postulante 1</h3>
             <span class="MTribu">T. Verde</span>
-            <p id="Votos" class="Votos"></p>
+            <p id="Votos" class="Votos"></p name = "voto" value "1" required>
             </div>
 
             <input class="Radio" type="radio">
@@ -215,7 +216,7 @@ function a_string($a)
             <p id="Votos" class="Votos"></p>
             </div>
 
-            <input class="Radio" type="radio">
+            <input class="Radio" type="radio" name = "voto" value "2" required>
         </div>
 
          <div class="PostDiv">
@@ -226,7 +227,7 @@ function a_string($a)
             <p id="Votos" class="Votos"></p>
             </div>
 
-            <input class="Radio" type="radio">
+            <input class="Radio" type="radio" name = "voto" value "3" required>
 
             <div class="card">
             <h3 class="Cacique">Postulante 4</h3>
@@ -234,7 +235,7 @@ function a_string($a)
             <p id="Votos" class="Votos"></p>
             </div>
 
-             <input class="Radio" type="radio">
+             <input class="Radio" type="radio" name = "voto" value "4" required>
         </div>
         
     </section>';
@@ -242,7 +243,7 @@ function a_string($a)
 
         case "violeta":
             echo '
-     <section class="PostulanteVioleta">
+     <section class="PostulanteVioleta" id="div_salud">
 
         <div class="PostDiv">
 
@@ -252,7 +253,7 @@ function a_string($a)
             <p id="Votos" class="Votos"></p>
             </div>
 
-            <input class="Radio" type="radio">
+            <input class="Radio" type="radio" name = "voto" value "1" required>
 
              <div class="card">
             <h3 class="Cacique">Postulante 2</h3>
@@ -260,7 +261,7 @@ function a_string($a)
             <p id="Votos" class="Votos"></p>
             </div>
             
-           <input class="Radio" type="radio">
+           <input class="Radio" type="radio" name = "voto" value "2" required>
         </div>
 
          <div class="PostDiv">
@@ -271,7 +272,7 @@ function a_string($a)
             <p id="Votos" class="Votos"></p>
             </div>
 
-           <input class="Radio" type="radio">
+           <input class="Radio" type="radio" name = "voto" value "3" required>
 
             <div class="card">
             <h3 class="Cacique">Postulante 4</h3>
@@ -279,7 +280,7 @@ function a_string($a)
             <p id="Votos" class="Votos"></p>
             </div>
 
-             <input class="Radio" type="radio" >
+             <input class="Radio" type="radio" name = "voto" value "4" required>
         </div>
         
     </section>
@@ -292,71 +293,7 @@ function a_string($a)
     else
     {
         
-    }?><!--
-    <script>
-
- 
-        let div_post = document.getElementsByClassName("postulantes");
-        let div_postulantes = div_post[0];
-        var posibilidades = ' . $posibilidades . ';
-        let postulantes = [];
-        let sub_post = "";
-        let aux_post = [];
-        aux_post[0] = [1, "Martin", "naranja", "0", ""];
-        aux_post[1] = [2, "Jorge", "verde", "0", ""];
-        aux_post[2] = [3, "Brayan", "azul", "0", ""];
-        aux_post[3] = [4, "Jose", "violeta", "0", ""];
-
-        for (let i = 0; i < posibilidades.length; i++)
-        {
-            if(posibilidades[i] == "A")
-            {
-                continue;
-            }
-            aux = false;
-            if(posibilidades[i] == "_")
-            {
-                aux = true;
-            }
-            else
-            {
-                aux = false;
-            }
-            if(aux)
-            {
-                console.log(sub_post);
-                postulantes.push(sub_post);
-                sub_post = "";
-                continue;
-            }
-            else
-            {
-                sub_post = sub_post + "" + posibilidades[i];
-                continue
-            }
-        }
-        if(postulantes)
-        {
-            for(let i = 0; i < postulantes.length; i++)
-            {
-                let postulante_h3 = document.createElement("h3");
-                postulante_h3.classList.add("Cacique");
-                postulante_h3.textContent = "asda";
-                let postulante_p = document.createElement("p");
-                postulante_p.classList.add("BotonVotar");
-                postulante_p.textContent = "as";
-                let postulante_button = document.createElement("button");
-                postulante_button.classList.add("BotonVotar");
-                postulante_button.textContent = "asda";
-                div_post.appendChild(postulante_h3);
-            }
-        }
-        else
-        {
-            console.log(1);
-        }
-
-    </script>-->
+    }?>
 
 
 
