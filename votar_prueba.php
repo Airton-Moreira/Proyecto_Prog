@@ -35,7 +35,7 @@ $candidatos = postulantes_de_tribu($votante["tribu"]);
         <p class="Desc">Solo un voto por persona</p>
     </main>
 
-     <!--
+     
     <section class="postulantes">
         <form action="registro_voto.php" method="POST"
               onsubmit="return confirm('Confirmar voto? Una vez votado, no se puede cambiar')">
@@ -59,6 +59,6 @@ $candidatos = postulantes_de_tribu($votante["tribu"]);
             <button type="submit" class="BotonVotar">Confirmar voto</button>
         </form>
     </section>
-    -->
+    
 </body>
 </html>
