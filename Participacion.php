@@ -16,6 +16,15 @@ foreach ($votantes as $v)
         $no_voto++;
     }
 }
+if($si_voto + $no_voto != 0)
+{
+    $estadistica = $si_voto / ($si_voto+$no_voto);    
+}
+else
+{
+    $estadistica = 0;
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,7 +65,7 @@ foreach ($votantes as $v)
 
       <div class="participacion">
         <h3>Participacion Total</h3>
-        <p class="estadistica"><?php echo $si_voto / ($si_voto + $no_voto);?></p>
+        <p class="estadistica"><?php echo $estadistica;?> %</p>
     </div>
 
 </section>
